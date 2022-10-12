@@ -1,0 +1,28 @@
+.overlayStart{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(252, 252, 252);
+    position: fixed;
+    z-index: 13;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    color: #16163B;
+    font-family: 'Montserrat', sans-serif !important;
+    
+}
+
+.logo_cover{
+    width: 80%;
+    height: auto;
+}
+
+
+
+h6{
+    position: absolute;
+    bottom: 10px;
+}

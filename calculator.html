@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Tornike Despotashvili">
+    <meta name="build by" content="Tornike Despotashvili">
+    <meta name="author contact" content="tornike.despotashvili@itdc.ge">
+    <meta property="og:image" content="./images/slider1.jpg"/>
+    <meta property="og:title" content="Carco Auto Import" />
+    <meta property="og:type"  content="webpage" />
+    <meta property="og:description" content="Carco Auto Import" />
+    <meta property="og:url" content="https://carco.ge/"/>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./calculatorStyle.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Poppins&display=swap" rel="stylesheet"> 
+    
+    <title>კალკულატორი</title>
+</head>
+<body oncontextmenu="return false">
+
+    
+    
+
+        <div class="calculator_outter">
+
+        <div class="calculator" >
+            <div class="calculator_up">
+        <!----------------------- აუქციონის დანამატი -------------------------------------------------     -->
+            <div id="sec1" class="auction">
+                <div class="logo_and_header for_responsive">
+                    <img src="./images/price_logo.png" alt="" class="auciton_logo">
+                    <p class="auction_txt auction_headers">აუქციონის დანამატი </p>
+                </div>
+
+                <div class="selection_auction ">
+                    <select name="format" class="row_Styles" id="fisrt_auction_selector" onchange="carPriceInput(), calculator(), changeSum()">
+                        
+                    </select>
+
+                    <input class="row_Styles" type="text" name="carprice" id="carprice"   placeholder="ავტომობილის ღირებულება" onchange="carPriceInput(this), changeSum(), calculator()">
+
+                    <div class="auction_addon">
+                        <p class="car_cost_left_txt">ავტომობილის ღირებულება</p>
+                        <p class="car_cost_right_txt">0$</p>
+                    </div>
+
+                    <div class="auciton_fee">
+                        <p class="auctionfee">აუქციონის საკომისიო</p>
+                        <div class="auctionfee_checkbox_div"><input type="checkbox" name="feebox" id="auctionfeecheckbox" onchange="carPriceInput(), calculator(), changeSum()"></div>
+                        <div class="auctionfee_right_txt_div"><p class="auctionfee_right_txt">0$</p></div>
+                        
+                    </div>
+
+                    
+
+                </div>
+            </div>
+        <!----------------------- END აუქციონის დანამატი -------------------------------------------------     -->
+
+        <!----------------------- ტრანსპორტირების სექცია -------------------------------------------------     -->
+            <div id="sec2" class="auction">
+                <div class="logo_and_header_transportation for_responsive">
+                    <img src="./images/truck_logo.png" alt="" class="auciton_logo">
+                    <p class="auction_txt auction_headers">ტრანსპორტირება აშშ-ში </p>
+                </div>
+
+                <div class="selection_transportation">
+                    <select name="auction_transportation" class="row_Styles" id="auction_transportation"   onchange="makeaiiaauction(), makeStates(), anchorage(), changeSum()">
+                        
+                    </select>
+
+                    <select name="states" class="row_Styles" id="states"  onchange="makePortsCopart(), makePortsIAAI(), anchorage(), changeSum()">
+                        
+                    </select>
+
+                    <select name="ports_usa" class="row_Styles" id="ports_USA"  onchange="anchorage(), changeSum()">
+                    </select>
+
+                    <div class="transportation_cost">
+                        
+                        <p class="transportation_cost_left_txt">შიდა ტრანსპორტირება</p>
+                        <p class="transportation_cost_right_txt">0$</p>
+                    </div>
+
+                    <div class="load_cost">
+                        <label id="datvirtvisID" for="loadcost">დატვირთვა</label>
+                        <p class="load_cost_right_txt">0$</p>
+                        <!-- <input type="checkbox" name="loadcost" id="loadcostCheckBox" onchange="calculator(),changeSum()"> -->
+                        
+                    </div>
+
+                </div>
+
+            </div>
+            <!----------------------- END ტრანსპორტირების სექცია -------------------------------------------------     -->
+
+            <!----------------------- საბოლოო დანიშნულება -------------------------------------------------     -->
+            <div id="sec3" class="auction">
+                <div class="logo_and_header_destination for_responsive">
+                    <img src="./images/ship_logo.png" alt="" class="auciton_logo">
+                    <p class="auction_txt auction_headers"> საბოლოო დანიშნულება  </p>
+                </div>
+
+                <div class="selection_destination">
+
+                    <select name="load_type" class="row_Styles" id="load" onchange="anchorage(),changeSum()">
+
+                    </select>
+
+                    </select>
+
+                    <select name="destination_country" class="row_Styles" id="destination_country" onchange="">
+                        <option value="georgia" selected>საქართველო</option>
+                    </select>
+
+                    <select name="destination_port" class="row_Styles" id="destination_port" onchange="">
+                       <option value="batumi" selected>ბათუმი</option>
+                       <option value="poti" selected>ფოთი</option>
+                    </select>
+
+                    <div class="destination_cost">
+                        <p class="destination_cost_left_txt">საბოლოო დანიშნულება</p>
+                        <p class="destination_cost_right_txt">0</p>
+                    </div>
+
+                    <div class="service_cost">
+                        <label id="momsaxureobis_teqsti" for="service_cost">მომსახურება</label>
+                        <input type="checkbox" name="loadcost" id="servicecost" onchange="calculator(),changeSum()">
+                        <div id="service_cost_right_txt_div"><p class="service_cost_right_txt">0$</p></div>
+                        
+                       
+                    </div>
+
+                    <div class="port_cost">
+                        <label id="portisXarji" for="port_cost">პორტის ხარჯები</label>
+                        <p class="port_cost_right_txt">0$</p>
+                        <!-- <input type="checkbox" name="portcost" id="portcost" onchange="calculator(),changeSum()"> -->
+                    </div>
+
+                    <div class="insurance_cost">
+                        <label id="dazgvevisID" for="dazgveva">დაზღვევა</label>
+                        <input type="checkbox" name="insurancecost" id="insurancecost" onchange="calculator(),changeSum()">
+                        <div id="insurance_cost_right_txt_div"><p class="insurance_cost_right_txt">0$</p></div>
+                        
+                        
+                    </div>
+
+                </div>
+
+            </div>
+            <!----------------------- END საბოლოო დანიშნულება -------------------------------------------------     -->
+
+             <!----------------------- განბაჟების კალკუალტორი -------------------------------------------------     -->
+             <div id="sec4" class="auction">
+                <div class="logo_and_header_ganbajeba for_responsive">
+                    <img src="./images/police_logo.png" alt="" class="auciton_logo">
+                    <p class="auction_txt auction_headers"> განბაჟება </p>
+                </div>
+
+                <div class="selection_ganbajeba">
+
+                    <select name="dataDropDown" class="row_Styles" id="dataDropDown" onchange="calculator(), changeSum()">
+                        <option value="">წელი</option>
+                    </select>
+
+                    <select name="engineDropdown" class="row_Styles" id="engineDropdown" onchange="calculator(), changeSum()">
+                        <option value="">ძრავი</option>
+                    </select>
+
+                    <div class="hybrid_div">
+                        <label for="hybrid">ჰიბრიდი:</label>
+                        <input type="checkbox" name="hybrid" id="hybrid" onchange="calculator(),changeSum()">
+                    </div>
+
+                    <div class="electro_div">
+                        <label for="electro">ელექტრო:</label>
+                        <input type="checkbox" name="electro" id="electro" onchange="calculator(), changeSum()">
+                    </div>
+
+                    <div class="RHD">
+                        <label for="rhd">მარჯვენა საჭე:</label>
+                        <input type="checkbox" name="rhd" id="rhd" onchange="calculator(), changeSum()">
+                    </div>
+
+                    <div class="ganbajeba_cost">
+                        <p class="ganbajeba_cost_left_txt">განბაჟება</p>
+                        <p class="ganbajeba_cost_right_txt">0$</p>
+                    </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="sum">
+                <img src="./images/money_logo.png" alt="" class="sum_logo">
+                <p class="sum_txt">ჯამში:</p>
+                <span class="sum_result"></span>
+            </div> 
+
+        </div>
+
+    </div>
+        
+
+
+
+
+        
+
+
+
+
+
+        <div class="footer">
+
+            <img src="./images/calculator.webp" alt="calculator" class="app_btn" id="calc_app">
+            <img src="./images/contact_app.png" alt="contact_app" class="app_btn contactapp" id="contactapp">
+                
+
+        </div>
+
+        <script src="./app.js"></script>
+        <script src="./js.js"></script>
+        <script src="./for_Container_Types.js"></script>
+        <script src="./containerPrices.js"></script>
+        <script src="./calculator.js"></script>
+        
+        <!-- <script src="./app.js"></script> -->
+</body>
+</html>

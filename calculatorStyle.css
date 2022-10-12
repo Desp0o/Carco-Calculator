@@ -9,7 +9,7 @@ body{
     position: relative;
 }
 
-.overlay{
+.overlayStart{
     width: 100%;
     height: 100%;
     background-color: rgb(252, 252, 252);
@@ -36,6 +36,11 @@ body{
 h6{
     position: absolute;
     bottom: 10px;
+}
+
+.calculator_outter{
+    width: 100%;
+    height: 100%;
 }
 
 .calculator{
