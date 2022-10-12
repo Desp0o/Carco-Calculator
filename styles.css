@@ -1,0 +1,523 @@
+@font-face {
+    font-family: Georgianf;
+    src: url(./bpg_extrasquare_mtavruli_2009.ttf);
+}
+
+html,body{
+    overflow-x: hidden;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    width: 100%;
+    height: 100vh;
+}
+
+.overlay{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.7);
+    visibility: hidden;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+
+header{
+    position: fixed;
+    z-index: 10;
+    font-family: Georgianf;
+    background-color: white;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    border-bottom: 15px solid;
+    border-image: linear-gradient(90deg, rgba(233,202,91,1) 0%, rgba(97,169,141,1) 47%, rgba(255,237,0,1) 100%) 1;
+}
+
+.header_content{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+}
+
+.navbar_logo{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin-left: 10%;
+}
+
+.navbar_logo_img{
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+}
+
+.logoeng{
+        width: 100%;
+        height: auto;
+        cursor: pointer;
+   
+}
+
+.navbar_content{
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    padding-left: 4%;
+}
+
+.navbar_links{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: black;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    height: 50px;
+    padding: 0 15px;
+    transition: all 0.4s ease;
+}
+
+
+
+.navbar_links{
+    font-size: 100% !important;
+}
+
+.active{
+    border-bottom: 1px solid;
+    -webkit-border-image: linear-gradient(90deg, rgba(233,202,91,1) 0%, rgba(97,169,141,1) 47%, rgba(255,237,0,1) 100%) 1;;
+    border-image: linear-gradient(90deg, rgba(233,202,91,1) 0%, rgba(97,169,141,1) 47%, rgba(255,237,0,1) 100%) 1;
+}
+
+.language_menu{
+    margin-left: 10%;
+}
+
+
+
+footer{
+    width: 100%;
+    height: 60px;
+    background: rgb(246,221,81);
+    background: linear-gradient(90deg, rgba(246,221,81,1) 0%, rgba(83,163,136,1) 100%);
+   
+    margin-top: 5%;
+}
+
+.burger_bar{
+    width: 60%;
+    height: 100%;
+    margin-right: -60%;
+    position: fixed;
+    z-index: 3;
+    right: 0;
+    background-color: #69AB8A;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease;
+}
+
+.burger_menu_logo{
+    width: 25px;
+    cursor: pointer;
+    margin-right: 10px;
+    position: absolute;
+    visibility: hidden;
+}
+
+.burger_menu_logo1{
+    width: 23px;
+    cursor: pointer;
+    margin-right: 10px;
+    visibility: hidden;
+}
+
+.burger_content{
+    font-family: georgianf;
+    width: 90%;
+    height: 100%;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    margin-top: 250px; 
+    align-items: left;
+}
+
+.burger_links{
+    text-decoration: none;
+    color: white;
+    margin-top: 20px;
+    width: fit-content;
+}
+
+
+
+/*********************** slider ***********/
+.carousel{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.slider{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.slide{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: all 0.4s ease;
+
+}
+
+
+
+.slider_img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.active_slider{
+    opacity: 1;
+}
+
+.slider_txt{
+    font-family: Georgianf;
+    color: white;
+    position: absolute;
+    top:90%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    margin-right: 2%;
+    font-weight: bolder;
+    cursor: pointer;
+    transition: all 0.6s ease;
+    user-select: none;
+    opacity: 0;
+}
+
+.slider_txt_active{
+    color: white;
+    top:65% !important;
+    transition: all 1.5s ease !important;
+    opacity: 1 !important;
+    text-shadow: 1px 1px 2px black;
+    font-weight: 900;
+}
+
+
+
+#left_arrow{
+    position: absolute;
+    top: 50%;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(125,129,128,0.5);
+    border-radius: 20px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(180deg);
+    font-size: 24px;
+    font-weight: bolder;
+    margin-left: 1%;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    user-select: none;
+}
+
+#left_arrow:hover{
+    background-color: rgba(125,129,128,1);
+    color: white;
+}
+
+#rigt_arrow{
+    position: absolute;
+    top: 50%;
+    left:  96%;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(125,129,128,0.5);
+    border-radius: 20px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    margin-right: 2%;
+    font-weight: bolder;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    user-select: none;
+}
+
+#rigt_arrow:hover{
+    background-color: rgba(125,129,128,1);
+    color: white;
+}
+
+.contact_buttons{
+    width:5px;
+    height: 180px;
+    position: absolute;
+    z-index: 5;
+    left: -130px;
+    top:180px;
+    transition: all 1s ease-in-out;
+}
+
+.contact_buttons_inner{
+    width: 100%;
+    height: 100%;
+    margin-left: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.whatsup{
+    width: 35px;
+    cursor: pointer;
+}
+.viber{
+    width: 50px;
+    cursor: pointer;
+}
+
+.facebook{
+    width: 33px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+@media (min-width:1400px) {
+    .navbar_logo_img{
+        width: 70%;
+        height: auto;
+    }
+    .navbar_content{
+        margin-left: 10%;
+    }
+    .slider_txt{
+        font-size: 34px !important;
+    }
+}
+
+@media (max-width:850px) {
+    .navbar_content{
+        display: none;
+    }
+    header{
+        height: 60px;
+    }
+    .header_content{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .navbar_logo{
+        width: 25%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        margin-left: 3%;
+    }
+    .burger_menu_logo{
+        visibility: visible;
+    }
+    
+    .burger_menu_logo1{
+        visibility: hidden;
+    }
+    #rigt_arrow{
+       
+        left:  88%;
+       
+    }
+
+    .language_menu{
+        margin-left: 0;
+        margin-top: 50px;
+    }
+
+    #language1,
+    #language2{
+        width: 30px !important;
+        height: auto;
+        cursor: pointer;
+    }
+
+    #language2{
+        margin-left: 15px;
+    }
+
+    .carousel{
+        margin-top: 75px;
+        width: 100%;
+        height: 65%;
+        position: relative;
+    }
+    
+    .slider_img{
+        width: 100%;
+        height: 100%;
+        object-fit: 200% ;
+        object-position:center;
+    }
+
+    .slider_txt{
+        font-size: 18px !important;
+    }
+    
+}
+
+/********* vaiberi ****/
+@media (max-width:800px) {
+    .whatsup{
+        width: 28px;
+        cursor: pointer;
+    }
+    .viber{
+        width: 40px;
+        cursor: pointer;
+    }
+    
+    .facebook{
+        width: 24px;
+        cursor: pointer;
+    }
+    .contact_buttons{
+        width:100px;
+        height: 120px;
+        top:140px;
+    }
+
+    
+    
+}
+
+@media (orientation: landscape) and (max-width:850px){
+    .burger_bar{
+        width: 40%;
+    }
+    .burger_content{
+        margin-top: 150px; 
+    }
+    
+    #language2{
+        margin-left: 0px;
+        width: 25px !important;
+    }
+
+    #language1{
+        width: 25px !important;
+    }
+    #rigt_arrow{
+        left: 93%;
+    }
+
+    .carousel{
+        width: 100%;
+        height: 80%;
+    }
+
+    .fix_car_txt{
+        font-size: 12px !important;
+    }
+
+    .contact_buttons{
+        top:80px;
+    }
+
+  }
+
+
+
+#language1,
+#language2{
+    width: 20px;
+    height: auto;
+    cursor: pointer;
+}
+
+
+input[type="checkbox"]{
+    margin-left: -45px;
+    position: relative;
+    width: 38px;
+    height: 18px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    -webkit-appearance: none;
+    box-shadow: inset 0 0 35px rgba(0,0,0,0.2);
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+input:checked[type="checkbox"]{
+    position: relative;
+    background-color: #69AB8A;
+    transition: all 0.5s ease;
+}
+
+input[type="checkbox"]:before{
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 18px;
+    border-radius: 20px;
+    top: 0;
+    left: 0;
+    background-color: #1C5343;
+    transition: all 0.5s ease;
+}
+
+input:checked[type="checkbox"]:before{
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 18px;
+    border-radius: 20px;
+    top: 0;
+    left: 18px;
+    background-color: #1C5343;
+}
+
+.topge{
+    display: none !important;
+}

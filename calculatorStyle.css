@@ -1,0 +1,514 @@
+html,body{
+    overflow-x: hidden;
+}
+
+.calculator{
+    font-family: georgianf;
+    width: 80%;
+    height: 80%;
+    border: 1px solid rgb(185, 185, 185);
+    border-radius: 2px;
+    margin: auto;
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 100px;
+}
+
+.calculator_up{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.auction{
+    width: 25%;
+    height: 80%;
+    padding-top: 1%;
+    margin: auto;
+    margin-top: 50px !important;
+}
+
+.logo_and_header{
+    margin-left: 20px;
+    width: 90%;
+    height: 10%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.auciton_logo{
+    height: 50%;
+    width: auto;
+}
+
+.auction_headers{
+    font-weight: bold;
+    font-size: 90%;
+}
+
+.auction_txt{
+    margin-left: 10px;
+}
+
+.selection_auction{
+    width: 100%;
+    height: 60%;
+}
+
+.row_Styles{
+    box-sizing: border-box;
+    width: 90%;
+    height: 42px;
+    padding: 0 30px 0 12px;
+    line-height: 42px;
+    font-size: 14px;
+    position: relative;
+    border: none;
+    color: #706d6d;
+    background-color: #eceff3;
+    display: block;
+    margin: 20px auto;
+}
+
+.auction_addon{
+    box-sizing: border-box;
+    width: 90%;
+    height: 42px;
+    background: #1e5a48;
+    margin: 40px auto 0 auto;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: white;
+    padding: 0 2%;
+    justify-content: space-between;
+}
+
+.auction_addon_right_txt{
+    font-size: 16px !important;
+}
+
+.car_cost{
+    box-sizing: border-box;
+    width: 240px;
+    height: 42px;
+    margin: 0px auto 0 auto;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: black;
+    padding: 0 2%;
+    justify-content: space-between;
+}
+
+.auciton_fee{
+    box-sizing: border-box;
+    width: 90%;
+    height: 42px;
+    margin: 0px auto 0 auto;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: black;
+    padding: 0 2%;
+    justify-content: space-between;
+}
+
+.auctionfee{
+    left: 0;
+    word-wrap:normal;
+    width: fit-content;
+}
+
+.auctionfee_checkbox_div{
+    width: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+}
+
+
+/*************************** ტრანსპორტირება *****************************************/
+
+.logo_and_header_transportation{
+    width: 90%;
+    height: 10%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: auto;
+}
+
+.selection_transportation{
+    width: 100%;
+    height: 60%;
+}
+
+.transportation_cost{
+    box-sizing: border-box;
+    width: 240px;
+    height: 42px;
+    margin: 0px auto 0 auto;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    background-color: #1e5a48;
+    color: white;
+    padding: 0 2%;
+    justify-content: space-between;
+}
+
+.load_cost{
+    box-sizing: border-box;
+    width: 90%;
+    height: 42px;
+    margin: 0px auto 0 auto;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: black;
+    padding: 0 2%;
+    justify-content: space-between;
+}
+
+.load_cost_right_txt{
+    margin-right: 0%;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+/****************************** დესტინატიონ ********************************/
+
+.logo_and_header_destination{
+    width: 90%;
+    height: 10%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: auto;
+}
+
+.destination_cost{
+    box-sizing: border-box;
+    width: 240px;
+    height: 42px;
+    margin: 0px auto 0 auto;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    background-color: #1e5a48;
+    color: white;
+    padding: 0 2%;
+    justify-content: space-between;
+}
+
+.service_cost{
+    box-sizing: border-box;
+    width: 90%;
+    height: 42px;
+    margin: 0px auto 0 auto;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: black;
+    padding: 0 2%;
+    /* padding-right: 8% !important; */
+    justify-content: space-between;
+    border-bottom: 0.5px solid #BDBDBD;
+}
+.port_cost{
+    box-sizing: border-box;
+    width: 240px;
+    height: 42px;
+    margin: 0px auto 0 auto;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: black;
+    padding: 0 2%;
+    justify-content: space-between;
+    border-bottom: 0.5px solid #BDBDBD;
+}
+
+.insurance_cost{
+    box-sizing: border-box;
+    width: 240px;
+    height: 42px;
+    margin: 0px auto 0 auto;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: black;
+    padding: 0 2%;
+    /* padding-right: 8% !important; */
+    justify-content: space-between;
+}
+
+
+/*******************  განბაჟება *****************/
+
+.logo_and_header_ganbajeba{
+    box-sizing: border-box;
+    width: 90%;
+    height: 10%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: auto;
+}
+
+.ganbajeba_cost{
+    box-sizing: border-box;
+    width: 240px;
+    height: 42px;
+    margin: 0px auto 0 auto;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    background-color: #1e5a48;
+    color: white;
+    padding: 0 2%;
+    justify-content: space-between;
+}
+
+.images-transmission{
+    margin-top: 9%;
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.images-transmission img{
+    margin: 0 10px;
+}
+
+.wheel_img{
+    height: 30px;
+    width: auto;
+}
+
+.battery{
+    transform: rotate(-90deg);
+    height: 30px;
+    width: auto;
+}
+
+.hybrid_div, .electro_div, .RHD{
+    box-sizing: border-box;
+    width: 90%;
+    height: 42px;
+    display: flex; 
+    align-items: center;
+    background-color: #ECEFF3;
+    margin: 20px auto;
+    padding: 0 10px 0 12px;
+    font-size: 14px;
+    justify-content: space-between;
+    
+    
+}
+
+
+
+.sum{
+    margin-top: 5px;
+    width: 240px;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.sum_logo{
+    width: auto;
+    height: 20px;
+}
+
+.sum_txt{
+    margin-left: 10px;
+    font-size: 24px;
+    font-weight: 900;
+    color: #1e5a48;
+}
+
+.sum_result{
+    margin-left: 10px;
+    font-size: 24px;
+    font-weight: 900;
+    color: #1e5a48;
+}
+
+.destination_cost,
+    .car_cost,
+    .transportation_cost,
+    .load_cost,
+    .service_cost,
+    .port_cost,
+    .insurance_cost,
+    .auction_addon,
+    .ganbajeba_cost,
+    .hybrid_div,
+    .electro_div,
+    .RHD{
+        width: 90% !important;
+    }
+
+    .meoradi{
+        margin-top: 100px !important;
+    }
+
+#auctionfeecheckbox{
+    margin-right:-25px;
+}  
+
+
+
+
+#insurance_cost_right_txt_div,
+#service_cost_right_txt_div{
+    width: 50px;
+    text-align: right;
+    display: flex;
+    box-sizing: border-box;
+    justify-content: flex-end;
+}
+
+.auctionfee_right_txt_div{
+    width: 80px;
+    text-align: right;
+    display: flex;
+    box-sizing: border-box;
+    justify-content: flex-end;
+}
+
+.auctionfee_right_txt{
+    width: 80px;
+    text-align: right;
+    display: flex;
+    box-sizing: border-box;
+    justify-content: flex-end;
+}
+
+
+
+@media (max-width:1000px) {
+    .auction_headers{
+        font-weight: bold;
+        font-size: 80%;
+    }
+}
+
+
+@media (max-width:800px) {
+    .auction_headers{
+        font-weight: bold;
+        font-size: 100%;
+    }
+
+    .calculator{
+        border: none;
+        height: fit-content;
+    }
+
+    .calculator_up{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .auction{
+        width: 100%;
+        margin: auto;
+    }
+
+    .auciton_logo{
+        height: 25px;
+        width: auto;
+    }
+
+    #sec2,
+    #sec3,
+    #sec4{
+        margin-top: 5%;
+    }
+
+    .sum{
+        margin-left: 5.5%;
+    }
+
+    #momsaxureobis_teqsti,
+#portisXarji,
+#dazgvevisID
+{
+    flex-basis: 80%;
+}
+
+#datvirtvisID{
+    flex-basis: 60%;
+}
+    
+}
+
+.auctionfee_checkbox_div_RUS{
+    margin-left: 40px !important;
+}
+
+.auctionfee_checkbox_div_RUS{
+    margin-left: 0px;
+}
+
+@media (min-width:1400px) {
+    .auctionfee_checkbox_div{
+        margin-left: 60px;
+    }
+
+    .auctionfee_checkbox_div_RUS{
+        margin-left: 100px !important;
+    }
+}
+
+
+
+
+#momsaxureobis_teqsti,
+#portisXarji,
+#dazgvevisID
+{
+    flex-basis: 75%;
+}
+
+#datvirtvisID{
+    flex-basis: 60%;
+}
+
+.contact_buttons{
+    width:100px;
+    height: 120px; 
+}
+
+
+
+
+.footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    background-color: #1e5a48;
+    border-top-left-radius:50px ;
+    border-top-right-radius:50px ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+
+.app_btn{
+    height: 30px;
+    width: auto;
+    cursor: pointer;
+}
