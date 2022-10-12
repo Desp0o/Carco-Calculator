@@ -507,8 +507,11 @@ html,body{
 }
 
 @media (max-width:400px) {
+    .footer{
+        gap: 50px;
+    }
     .app_btn{
-        height: 50px;
+        height: 30px;
         width: auto;
         cursor: pointer;
     }
