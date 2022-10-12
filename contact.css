@@ -1,0 +1,121 @@
+
+.contact_content{
+    margin-top: 50px;
+    width: 100%;
+    height: 70%;
+    position: absolute;
+    display: none;
+    padding-bottom: 80px;
+}
+
+.contact_content_inner{
+    width: 60%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    box-shadow:  0px 0px 30px 0px #888888;
+}
+
+.contact_page_block_txt{
+    color: black;
+    font-family: georgianf;
+    margin-left: 20px;
+}
+
+.contact_inner_left{
+    width:50%;
+    height:100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact_inner_right{
+    width:50%;
+    height:100%;    
+}
+
+
+
+
+.contact_page_block{
+    width: 80%;
+    height: 10%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+
+.contact_page_block_icon{
+    width: 40px;
+}
+
+.misCon{
+    margin-left: 35px;
+}
+
+.mobCon{
+    margin-left: 37px;
+}
+
+.viber{
+    width: 60px !important;
+}
+
+.contact_loc{
+    height: 45px !important;
+}
+
+.nomrebi{
+    margin: auto;
+    cursor: pointer;
+}
+.meoradi{
+    margin-top: 100px !important;
+}
+
+@media (max-width:850px) {
+    .contact_content{
+        height: 80%;
+    }
+
+    .contact_content_inner{
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+    }
+    .contact_inner_left{
+        width:100%;
+        height:100%;
+    }
+    .contact_inner_right{
+        width:100%;
+        height:100%;
+    }
+
+    .viber{
+        width: 52px !important;
+    }
+
+    .whatsup{
+        width: 35px !important;
+    }
+
+    .facebook{
+        width: 35px !important;
+    }
+    
+    .contact_loc{
+        height: 35px !important;
+    }
+
+}
+
+
+@media (orientation: landscape) and (max-width:850px){
+    .contact_content_inner{
+        width: 90%;
+        display: flex;
+        flex-direction: unset;
+    }    
+
+}
